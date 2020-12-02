@@ -1,0 +1,489 @@
+
+html{
+    
+  	background-image: url('../img/fal.jpg');
+    font-family: 'Changa', sans-serif;
+}
+
+
+header {
+  	background-image: url('../img/technocracy01.jpg');
+    background-size: auto 100%;
+    background-position: center;
+    width: 100%;
+    height: 445px;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
+}
+
+/*strict: header-szerűség*/
+.header {
+  	background-image: url('../img/technocracy01.jpg');
+    background-size: auto 100%;
+    background-position: center;
+    width: 100%;
+    height: 445px;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
+}
+
+body{
+    background-color:white;
+  	width:80%;
+    border-radius: 10px;
+    border-bottom-width: medium;
+  	padding:0 20px 20px 20px; 
+  	margin:20px auto;
+    box-shadow:0 0 30px black;
+    font-size: 1.2em;
+    display: grid;
+    text-align: justify;
+}
+
+/*high-contrast*/
+#activate-normal {
+  display: none;
+}
+.magas-kontraszt-ikon{
+    float: right;
+}
+
+#tartalom p::first-letter{
+    font-size: 150%;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+/*képernyőolvasóknak*/
+.kipozicional a{
+    position: absolute;
+    left: -9999px;
+}
+.kipozicional a:focus{
+    position: static;
+    background: white;
+}
+
+/*tartalom*/
+article p {
+  text-indent:1em;
+  line-height: 1.7em;
+}
+/*strict: article-szerűség*/
+.article p {
+  text-indent:1em;
+  line-height: 1.7em;
+}
+
+/*footerrr*/
+footer{
+  background-color: lightgray;
+  padding: 0%;
+  margin: 0%;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+footer p{
+  text-indent: 1em;
+}
+
+footer ul{
+  list-style: none;
+  padding-left: 17px;
+}
+
+/*strict: footer-szerűség*/
+.footer{
+  background-color: lightgray;
+  padding: 0%;
+  margin: 0%;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.footer p{
+  text-indent: 1em;
+}
+
+.footer ul{
+  list-style: none;
+  padding-left: 17px;
+}
+
+a{
+  color: #780c0a;/*kontr.:3,95*/
+      
+}
+a:visited{
+  color: #c40502;/*kontr.:2,17*/
+}
+a:hover{
+  color: black;
+}
+
+
+/*aside kepek*/
+.gallery{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.kepek figure:hover img {
+	opacity: 1;
+	-webkit-animation: flash 1.5s;
+	animation: flash 1.5s;
+}
+@-webkit-keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/*reszponziv oldalak*/
+header{ grid-area: fejlec;}
+.header{ grid-area: fejlec;}
+main {grid-area: fo;}
+.main {grid-area: fo;}
+aside {grid-area: oldalsav;}
+footer {grid-area: lablec;}
+
+body {
+	grid-auto-columns: 3fr 1fr;
+	grid-template-areas: 
+	'fejlec fejlec'
+	'menu menu'
+    'fo oldalsav'
+	'lablec lablec';
+}
+
+body.noAside{
+    grid-auto-columns: 1fr;
+	grid-template-areas: 
+	'fejlec'
+	'menu'
+    'fo'
+	'lablec';
+}
+
+@media screen and (max-width: 991px) {
+    .gallery{
+        width: 50%;
+        float: left;
+        text-align: center;
+        margin-top: 20px;
+    }
+   
+	body {
+		grid-auto-columns:1fr;
+		grid-template-areas: 
+		'fejlec'
+        'menu'
+		'fo'
+		'oldalsav'
+		'lablec';
+	}
+}
+
+@media screen and (max-width: 575px) {
+    .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+    .gallery{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+    body {
+		grid-auto-columns: 1fr;
+		grid-template-areas: 
+		'fejlec'
+		'menu' 
+		'fo'
+		'oldalsav'
+		'lablec';
+	}
+}
+
+
+/*táblázat*/
+.osszehasonlitas{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+details{
+    font-family: sans-serif;
+    font-size: 0.8em;
+}
+table {
+    width: 100%;
+    border: 1px solid black;
+}
+tbody th{
+    width: 20%;
+}
+
+.oszzehasonlitas th,
+.oszzehasonlitas td {
+    padding: 10px 12px;
+    border: 1px solid black;
+}
+
+.oszzehasonlitas tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+.oszzehasonlitas tbody th {
+    text-align: center;
+}
+
+.oszzehasonlitas tbody tr:nth-of-type(even) {
+    background-color: #ddd;
+}
+
+.oszzehasonlitas thead {
+    background-color: #474747;
+    color: #ffffff;
+}
+
+/*videó*/
+figure {
+	margin:auto;
+	border-radius:20px;
+	width:80%;
+	display:block;
+}
+#videoinfo{
+    display: block;
+    text-indent: 10%;
+    font-size: 0.9em;
+}
+.iframe-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/*menüsor*/
+.topnav {
+  overflow: hidden;
+  background-color: #780c0a;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.topnav a:hover {
+  background-color: black;
+  color: white;
+}
+
+.topnav a.active {
+    font-weight: 700;
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+/*felugrás gomb*/
+#btnScrollToTop{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background: black;
+    box-shadow: 0 0 10px black;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    
+}
+#btnScrollToTop:hover{
+    background: #780c0a;
+}
+
+/*képnézegető*/
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+    color: white;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 0.8em;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 0.9em;
+  width: 0.9em;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/*fancy űrlap*/
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  border-radius: 10px;
+
+}
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=reset] {
+  background-color: #d43131;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+input[type=reset]:hover {
+  background-color: #b52121;
+}
+
+.container {
+  border-radius: 15px;
+  background-color: lightgray;
+  padding: 20px;
+}
