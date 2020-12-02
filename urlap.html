@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <title>Digitális diktatúra Kínában - Űrlap</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/normal.css">
+  <link rel="stylesheet" media="print" type="text/css" href="css/print.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Changa:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="noAside">
+  <div class="kipozicional">
+    <a href="#tartalom">Ugrás a tartalomra</a>
+  </div>
+  <header>
+
+    <nav class="topnav" id="menusor">
+      <a href="index.html">Főoldal</a>
+      <a href="mukodese.html">Működése</a>
+      <a href="orwellival.html">Orwelli valóság Kínában</a>
+      <a href="urlap.html" class="active">Űrlap</a>
+      <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <div class="magas-kontraszt-ikon">
+        <a href="" id="activate-high-contrast"><img src="css/high-contrast.svg" alt="nagykontrasztú változat"
+            height="20"></a>
+        <a href="" id="activate-normal">Vissza a normál változatra</a>
+      </div>
+    </nav>
+  </header>
+  <button id="btnScrollToTop">
+    <i class="material-icons">arrow_upward</i>
+  </button>
+  <main id="tartalom">
+    <h1>Űrlap</h1>
+    <div class="container">
+      <form method="POST" action="mailto:daniviki3@gmail.com">
+        <label for="teljesnev"><strong>Név:</strong></label>
+        <br>
+        <input type="text" name="nev" id="teljesnev" size="70" maxlength="150" required>
+        <br>
+        <label for="emailcim"><strong>E-mail cím:</strong></label>
+        <br>
+        <input type="text" name="email" id="emailcim" size="70" maxlength="150" required>
+        <br>
+        <label for="hatasok"><strong>Ön szerint mik a pozitív és negatív hatásai a digitális
+            diktatúrának?</strong></label>
+        <br>
+        <textarea id="hatasok" name="hatasok" rows="5" cols="80" maxlength="400">
+                </textarea>
+        <br>
+        <label><strong>Ön szerint elképzelhető, hogy Európában is megfigyelik az embereket az eszközeiken
+            keresztül?</strong></label>
+        <div class="radioContainer">
+          <input type="radio" name="valasz" value="Igen" id="igen" class="radio">
+          <label for="igen">Igen</label><br>
+          <input type="radio" name="valasz" value="Nem" id="nem" class="radio">
+          <label for="nem">Nem</label><br>
+          <input type="radio" name="valasz" value="Talán" id="talan" class="radio">
+          <label for="talan">Talán</label>
+        </div>
+        <br>
+        <input type="checkbox" id="tudjtobbet" name="tudjtobbet" value="Többet szeretnék tudni">
+        <label for="tudjtobbet"> Szeretnék többet olvasni erről a témáról.</label>
+        <br>
+        <input type="submit" value="Tovább">
+        <input type="reset" value="Törlés">
+      </form>
+    </div>
+    <script>
+      const btnScrollToTop = document.querySelector("#btnScrollToTop");
+
+      btnScrollToTop.addEventListener("click", function () {
+        //window.scrollTo(0, 0);
+
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth"
+        });
+
+      });
+    </script>
+    <script>
+      function responsiveNav() {
+        var x = document.getElementById("menusor");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+    <script src="css/css-switch.js"></script>
+  </main>
+
+  <footer>
+    <p>Források:</p>
+    <ul>
+      <li><a href="https://index.hu/kulfold/2018/09/22/a_szemunk_elott_epult_ki_a_digitalis_diktatura/"
+          target="_blank">index.hu</a></li>
+      <li><a href="https://www.klubradio.hu/adasok/digitalis-kina-uj-diktatura-epul-109251"
+          target="_blank">klubradio.hu</a></li>
+      <li><a href="http://szentkoronaradio.com/blog/2020/05/01/tovabb-elesedik-a-digitalis-diktatura-kinaban/"
+          target="_blank">szentkoronaradio.com</a></li>
+
+    </ul>
+  </footer>
+</body>
+
+</html>
