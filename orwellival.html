@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>Digitális diktatúra Kínában - Orwelli valóság</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" media="screen" type="text/css" href="css/normal.css">
+    <link rel="stylesheet" media="print" type="text/css" href="css/print.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div class="kipozicional">
+        <a href="#tartalom">Ugrás a tartalomra</a>
+    </div>
+    <header>
+        <nav class="topnav" id="menusor">
+            <a href="index.html">Főoldal</a>
+            <a href="mukodese.html">Működése</a>
+            <a href="orwellival.html" class="active">Orwelli valóság Kínában</a>
+            <a href="urlap.html">Űrlap</a>
+            <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <div class="magas-kontraszt-ikon">
+                <a href="" id="activate-high-contrast"><img src="css/high-contrast.svg" alt="nagykontrasztú változat"
+                        height="20"></a>
+                <a href="" id="activate-normal">Vissza a normál változatra</a>
+            </div>
+        </nav>
+
+    </header>
+    <button id="btnScrollToTop">
+        <i class="material-icons">arrow_upward</i>
+    </button>
+    <main id="tartalom">
+        <article>
+            <h1>Orwelli valóság Kínában</h1>
+            <p>
+                George Orwell 1984 című művében az ábrázolt személyközi, <strong>megfigyelési</strong> és
+                tömegkommunikációs <strong>eszközök</strong>,
+                információalkotási, -strukturálási, -tárolási és - továbbítási módozatok a regényvilág
+                alapstruktúrájának meghatározó részét képezik. Orwell rémálma válik valóra Kínában. <strong>Nagy
+                    Testvér</strong> nemcsak
+                figyel, hanem <strong>jutalmaz</strong> és <strong>büntet</strong> is, automatikusan és
+                <strong>azonnal</strong>. A mű a digitális diktatúrák irodalmi
+                előképe. Ahogy azt George Orwell elképzelte az 1984-ben, a tévé is nézni fog minket, miközben mi nézzük.
+            </p>
+            <p>
+                A koronavírus ürügyén újabb orwelli módszerek kerültek bevezetésre. Az embereket egy <strong>kötelezően
+                    telepítendő mobilapplikáción</strong> keresztül kezdték el <strong>ellenőrizni</strong>, mely
+                színkódok szerint tesz különbséget
+                az egyének között, és tényleg minden lépésüket leköveti.
+            </p>
+            <p>
+                Az app ismeretlen szempontok alapján, de
+                feltételezhetően az illető viselkedését, élőhelyét, munkáját figyelembe véve, <strong>három kategóriába
+                    sorolja</strong>
+                őt, aszerint, hogy mennyire veszélyeztetett a fertőzés szempontjából.
+            </p>
+
+            <p><a
+                    href="https://index.hu/techtud/2020/02/26/a_kinai_digitalis_diktatura_levadassza_a_jarvanyhelyzetrol_negativan_posztolokat/">Ide
+                    kattintva többet olvashatnak a COVID-19 és a digitális diktatúra kapcsolatáról.</a>
+
+            </p>
+        </article>
+        <h2>Összehasonlítás</h2>
+        <table class="oszzehasonlitas">
+            <caption>
+                <details>
+                    <summary>Összefoglaló</summary>
+                    <p>A táblázatban láthatjuk, hogy valósulnak meg a műben leírt események/helyzetek, és hogy hol
+                        találhatóak a könyvben.</p>
+                </details>
+            </caption>
+            <thead>
+                <tr>
+                    <th>Helye a műben</th>
+                    <th>Tartalom</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">7–8. oldal</th>
+                    <td>A "teleképek" ezen közvetítési jellemvonása annál inkább kifejezett, hogy azokat a szereplők
+                        <strong> nem
+                            kapcsolhatják ki</strong>, és nem is némíthatják el, legfeljebb lehalkíthatják, így a
+                        teleképek
+                        folyamatosan működnek.</td>
+                </tr>
+                <tr>
+                    <th scope="row">34. oldal</th>
+                    <td>A "teleképek" használhatók <strong>lehallgatásra</strong>, továbbá a beszédnek, különböző
+                        hanghatásoknak, zenei
+                        daraboknak,
+                        <strong>propagandaüzeneteknek</strong>, továbbá instrukcióknak a <strong>továbbítására</strong>.
+                        A teleképek
+                        továbbá időmérőként és -jelzőként működnek</td>
+                </tr>
+                <tr>
+                    <th scope="row">46–48. oldal</th>
+                    <td>A műben a dokumentumok hatályon kívül helyezett változatait a regényben minden esetben, kivétel
+                        nélkül
+                        sikerül begyűjteni és <strong>megsemmisíteni</strong>, helyükre pedig <strong>korrigált
+                            nyomtatványt juttatni</strong>. Ennek a
+                        bonyolult, többlépcsős
+                        folyamatnak a pontos mechanizmusát, kivitelezési módját és logisztikáját a regény nem
+                        részletezi, az eredményt azonban
+                        minden esetben <strong>hibátlannak írja le</strong>.</td>
+                </tr>
+            </tbody>
+        </table>
+        <script>
+            const btnScrollToTop = document.querySelector("#btnScrollToTop");
+
+            btnScrollToTop.addEventListener("click", function () {
+                //window.scrollTo(0, 0);
+
+                window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: "smooth"
+                });
+            });
+        </script>
+        <script>
+            function responsiveNav() {
+                var x = document.getElementById("menusor");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+        <script src="css/css-switch.js"></script>
+    </main>
+    <aside>
+        <div class="kepek">
+            <figure><a href="img/orwell.jpg" target="_blank"><img src="img/orwell-konyv.jpg" alt="orwellborito"
+                        class="gallery"></a></figure>
+
+            <figure><a href="img/kina-megfigyeles.jpg" target="_blank"><img src="img/kina-megfigyeles-236x334.jpg"
+                        alt="megfigyeles" class="gallery"></a></figure>
+        </div>
+    </aside>
+
+    <footer>
+        <p>Források:</p>
+        <ul>
+            <li><a href="https://index.hu/kulfold/2018/09/22/a_szemunk_elott_epult_ki_a_digitalis_diktatura/"
+                    target="_blank">index.hu</a></li>
+            <li><a href="https://www.klubradio.hu/adasok/digitalis-kina-uj-diktatura-epul-109251"
+                    target="_blank">klubradio.hu</a></li>
+            <li><a href="http://szentkoronaradio.com/blog/2020/05/01/tovabb-elesedik-a-digitalis-diktatura-kinaban/"
+                    target="_blank">szentkoronaradio.com</a></li>
+
+        </ul>
+    </footer>
+</body>
+
+</html>
