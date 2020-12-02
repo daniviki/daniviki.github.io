@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>Digitális diktatúra Kínában - Főoldal</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" media="screen" type="text/css" href="css/normal.css">
+    <link rel="stylesheet" media="print" type="text/css" href="css/print.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="kipozicional">
+        <a href="#tartalom">Ugrás a tartalomra</a>
+    </div>
+    <header>
+
+        <nav class="topnav" id="menusor">
+
+            <a href="index.html" class="active">Főoldal</a>
+            <a href="mukodese.html">Működése</a>
+            <a href="orwellival.html">Orwelli valóság Kínában</a>
+            <a href="urlap.html">Űrlap</a>
+            <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <div class="magas-kontraszt-ikon">
+                <a href="" id="activate-high-contrast"><img src="css/high-contrast.svg" alt="nagykontrasztú változat"
+                        height="20"></a>
+                <a href="" id="activate-normal">Vissza a normál változatra</a>
+            </div>
+        </nav>
+
+    </header>
+    <button id="btnScrollToTop">
+        <i class="material-icons">arrow_upward</i>
+    </button>
+    <main id="tartalom">
+        <article>
+            <h1>A digitális diktatúra</h1>
+            <h2>"Leave no dark corner", avagy „Ne maradjon sötét zug”</h2>
+
+            <p>Bő tíz éve még sci-finek tűnhetett, de mára már mondhatjuk, hogy a digitális diktatúra Kínában
+                megszilárdulni látszik.
+                Pár évvel ezelőtt 170 millió térfigyelő kamera figyelte a lakosságot, 2020-ra további <strong>400
+                    milliót</strong> terveznek hadba állítani. Kína több olyan intézkedést vezetett be, amivel a
+                kamerákon kívül is megfigyelheti polgárait: digitális pénz, a pénzforgalom totális ellenőrzésére,
+                autókba <strong>kötelező GPS nyomkövető</strong> alkalmazása stb.</p>
+            <p>A középiskolai diákok órai viselkedését is <strong>arcfelismerő szoftverekkel</strong> figyelik, a
+                kamerák semleges, boldog, szomorú, csalódott, ijedt, mérges és meglepett arckifejezéseket tudnak
+                felismerni, valamint hatféle viselkedést, hogy a tanuló áll, olvas, ír, jelentkezik, a tanárra figyel,
+                vagy esetleg az asztalon fetreng-e.</p>
+
+            <p>Gyakran a <strong>mobiltelefonok tartalmát</strong> is letöltik és <strong>ellenőrzik</strong> a
+                hatóságok.
+                A potenciálisan veszélyes embereket algoritmusok segítségével szűrik ki.</p>
+            <p>Ezt a fajta népnevelést könnyen el tudja adni a kínai állami propaganda, ha a közbiztonság felől közelít.
+                A térfigyelő kamerák mögött az arcfelismerő algoritmusok pillanatok alatt <strong>megtalálhatják a
+                    szökevényeket</strong>. Rengeteg ilyen hírrel van tele a kínai média.
+                Az állam biztonságot ígér az embereknek, cserébe elveszi tőlük a magánszférát.</p>
+            <p>Cél az <strong>algoritmikus kormányzás</strong>. </p>
+        </article>
+        <script>
+            const btnScrollToTop = document.querySelector("#btnScrollToTop");
+
+            btnScrollToTop.addEventListener("click", function () {
+
+                window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: "smooth"
+                });
+
+            });
+        </script>
+        <script>
+            function responsiveNav() {
+                var x = document.getElementById("menusor");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+        <script src="css/css-switch.js"></script>
+    </main>
+    <aside>
+        <div class="kepek">
+            <figure><a href="img/kamera.jpg" target="_blank"><img src="img/kamera-236x334.jpg"
+                        alt="Kamerák egy állomáson" class="gallery"></a></figure>
+            <figure><a href="img/arc-alg-500x301.jpg" target="_blank"><img src="img/arc-alg.jpg" alt="Arc"
+                        class="gallery"></a></figure>
+        </div>
+    </aside>
+    <footer>
+        <p>Források:</p>
+        <ul>
+            <li><a href="https://index.hu/kulfold/2018/09/22/a_szemunk_elott_epult_ki_a_digitalis_diktatura/"
+                    target="_blank">index.hu</a></li>
+            <li><a href="https://www.klubradio.hu/adasok/digitalis-kina-uj-diktatura-epul-109251"
+                    target="_blank">klubradio.hu</a></li>
+            <li><a href="http://szentkoronaradio.com/blog/2020/05/01/tovabb-elesedik-a-digitalis-diktatura-kinaban/"
+                    target="_blank">szentkoronaradio.com</a></li>
+
+        </ul>
+    </footer>
+</body>
+
+</html>
